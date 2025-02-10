@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Income Tax Calculator</title>
+
+
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+
+  <link href="css/style.css" rel="stylesheet" />
+
+  <link href="css/responsive.css" rel="stylesheet" />
+
+</head>
+
+<body style="background-image: url('images/bg.png'); "class="sub_page">
+
+  <div class="hero_area">
+
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              John Michael Rivera
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ">
+              <li class="nav-item ">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="conversion.html"> Conversion</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="income tax.html">Income Tax </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="factorial.html"> Factorial</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="simple payroll.html">Simple Payroll</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="gradescomputation.html">Grades</a>
+              </li>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+  </div>
+
+  <script>
+    function calculateTax() {
+      const income = parseFloat(document.getElementById('income').value);
+      let tax = 0;
+  
+      if (income <= 250000) {
+        tax = 0;
+      } else if (income > 250000 && income <= 400000) {
+        tax = 0.20 * (income - 250000);
+      } else if (income > 400000 && income <= 800000) {
+        tax = 30000 + 0.25 * (income - 400000);
+      } else if (income > 800000 && income <= 2000000) {
+        tax = 130000 + 0.30 * (income - 800000);
+      } else if (income > 2000000 && income <= 8000000) {
+        tax = 490000 + 0.32 * (income - 2000000);
+      } else if (income > 8000000) {
+        tax = 2410000 + 0.35 * (income - 8000000);
+      }
+  
+      document.getElementById('result').innerHTML = `Income Tax: PHP ${tax.toFixed(2)}`;
+    }
+  </script>
+
+<style>
+  button {
+    background-color: #81B29A; 
+    color: rgb(255, 255, 255); 
+    padding: 10px 20px;
+    border: 1px solid #81B29A;
+    cursor: pointer;
+    width: 500px;
+  }
+  button:hover {
+    background-color: #3D405B; 
+    color: rgb(255, 255, 255); 
+  }
+
+  .out{
+    text-align: justify;
+  }
+
+
+  label {
+    background-color: #E07A5F; 
+    color: rgb(255, 255, 255); 
+    padding: 10px 20px;
+    border: 1px solid #E07A5F;
+    cursor: pointer;
+    width: 500px;
+  }
+
+  .forint {
+    background-color: #ffffff; 
+    color: rgb(0, 0, 0); 
+    padding: 10px 20px;
+    border: 1px solid #E07A5F;
+    cursor: pointer;
+    width: 500px;
+    text-align: right;
+  }
+
+  .justified {
+      text-align: justify;
+      width: 500px; 
+      height: 250px; 
+      border: 1px solid #81B29A;
+      padding: 10px;
+      background-color: #81B29A; 
+      color: rgb(255, 255, 255); 
+    }
+
+
+    .try {
+      text-align: center;
+      width: 500px; 
+      height: 70px; 
+      border: 1px solid #E07A5F;
+      padding: 10px;
+      background-color: #E07A5F; 
+      color: rgb(255, 255, 255);
+    }
+
+    .forcalc {
+      text-align: center;
+      width: 500px; 
+      height: 50px; 
+      border: 1px solid #E07A5F;
+      padding: 10px;
+      background-color: #E07A5F; 
+      color: rgb(255, 255, 255);
+    }
+
+    .forres {
+      text-align: right;
+      width: 500px; 
+      height: 50px; 
+      border: 1px solid #E07A5F;
+      padding: 10px;
+      background-color: #E07A5F; 
+      color: rgb(255, 255, 255);
+    }
+
+    
+  .forres:hover {
+    background-color: #3D405B; 
+    color: rgb(255, 255, 255); 
+    border: 1px solid #3D405B;
+    }
+
+    .image {
+  float: right; 
+
+}
+
+</style>
+
+<section style="background-image: url('images/bg.png'); background-color: #F2CC8F;" class="about_section layout_padding layout_margin">
+  <div class="container  ">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="detail-box">
+          <div class="heading_container">
+
+            
+              <h1 class="try">
+
+                Income Tax Calculator
+              </h1>
+              <p class="justified">
+                Income Tax Calculator is a user-friendly tool designed to swiftly determine the income tax liability for individuals based on their taxable income. By entering the taxable income in Philippine pesos (PHP), the calculator instantly 
+                computes the corresponding income tax amount using predefined tax brackets and rates as per the Philippine tax system. This efficient and accessible tool assists individuals 
+                in estimating their income tax obligations, facilitating better financial planning and decision-making. 
+              </p>
+              <label class="forcalc" for="income">Enter Taxable Income (PHP):</label>
+              <input class="forint" type="number" id="income" name="income" min="0" required>
+              <p> </p>
+              <button onclick="calculateTax()">Calculate</button>
+              <p class="forres"  id="result">
+              </p>
+           </div>
+          </div>
+        </div>
+        <div class="col-md-6 ">
+          <div class="img-box">
+           <img src="images/money.png" alt="">
+        </div>
+    </div>
+ 
+
+    </section>
+
+
+
+
+  
+
+  <div style="background-image: url('images/bg.png'); "class="footer_container">
+
+
+    <section class="info_section ">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3 ">
+            <div class="info_detail">
+              <h4>
+                John Michael Rivera
+              </h4>
+              <p class="out">
+                I'm a first-year BSIT (Bachelor of Science in Information Technology) student with a passion for coding. I thrive on unraveling the intricate world of programming languages, always seeking new challenges to expand my skills. My journey into the realm of technology is just beginning, and I'm excited to explore, learn, and create innovative solutions that can make a difference."
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-2 mx-auto">
+            <div class="info_link_box">
+              <h4>
+                Links
+              </h4>
+              <div class="info_links">
+                <a class="" href="index.html">
+                  Home
+                </a>
+                <a class="" href="conversion.html">
+                  Conversion
+                </a>
+                <a class="" href="income tax.html">
+                  Income Tax
+                </a>
+                <a class="" href="factorial.html">
+                  Factorial
+                </a>
+                <a class="" href="simple payroll.html">
+                  Simple Payroll
+                </a>
+                <a class="" href="gradescomputation.html">
+                  Grades
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ">
+            <h4>
+              Project
+            </h4>
+            <p class="out">
+              This is our final project in our ITC subject. This website serves as a medium in order for me to showcase my passion in creating website especially front-end development.
+            </p>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-0 ml-auto">
+            <div class="info_contact">
+              <h4>
+                Address
+              </h4>
+              <div class="contact_link_box">
+                <a href="">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  <span>
+                    Jacinto Street, Davao City
+                  </span>
+                </a>
+                <a href="">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <span>
+                    Call +63 91232938291
+                  </span>
+                </a>
+                <a href="">
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <span>
+                    jmfrivera@addu.edu.ph
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="info_social">
+              <a href="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <footer  class="footer_section">
+      <div class="container">
+        <p>
+      John Michael Rivera
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Factorial</title>
+
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
+
+</head>
+
+<body style="background-image: url('images/bg.png'); "class="sub_page">
+
+  <div class="hero_area">
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              John Michael Rivera
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ">
+              <li class="nav-item ">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="conversion.html"> Conversion</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="income tax.html">Income Tax </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="factorial.html">Factorial</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="simple payroll.html">Simple Payroll</a>
+              </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gradescomputation.html">Grades </a>
+            </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+<script>
+  function calculate() {
+    const n = parseInt(document.getElementById('numberInput').value);
+
+    let factorial = 1;
+    let i = 1;
+    while (i <= n) {
+      factorial *= i;
+      i++;
+    }
+    document.getElementById('factorialResult').innerHTML = `Factorial of ${n}: ${factorial}`;
+
+    let sum = 0;
+    let j = 1;
+    do {
+      sum += j;
+      j++;
+    } while (j <= n);
+    document.getElementById('sumResult').innerHTML = `Sum of first ${n} numbers: ${sum}`;
+
+    let total = 0;
+    for (let k = 1; k <= n; k++) {
+      total += k;
+    }
+    const average = total / n;
+    const averageFormatted = average.toFixed(2);
+    document.getElementById('averageResult').innerHTML = `Average of first ${n} numbers: ${averageFormatted}`;
+  }
+</script>
+
+<style>
+  button {
+    background-color: #f8842b; 
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: 1px solid #f8842b;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: rgb(255, 255, 255); 
+    color: rgb(74, 34, 34); 
+  }
+
+  .hey {
+       text-align: right;
+      width: 400px; 
+      height: 50px;
+      border: 1px solid #F4F1DE;
+      padding: 10px;
+      background-color: #F4F1DE; 
+      color: rgb(0, 0, 0); 
+  }
+
+  .hey:hover {
+    background-color: #81B29A; 
+    color: #f1f1f1; 
+  }
+
+
+  
+  .forres {
+      text-align: center;
+      width: 400px; 
+      height: 50px; 
+      border: 1px solid #F2CC8F;
+      padding: 10px;
+      background-color: #F2CC8F; 
+      color: #3D405B;
+        }
+
+  .calculate {
+      text-align: center;
+      width: 400px; 
+      height: 40px; 
+      border: 1px solid #F2CC8F;
+      padding: 10px;
+      background-color: #F2CC8F; 
+      color: #3D405B;
+        }
+
+    .out{
+    text-align: justify;
+  }
+
+
+  .forints {
+      text-align: right;
+      width: 400px; 
+      height: 50px; 
+      border: 1px solid #ffffff;
+      padding: 10px;
+      background-color: #ffffff; 
+      color: rgb(0, 0, 0);
+        }
+
+  .introhehe {
+      text-align: center;
+      width: 400px; 
+      height: 120px; 
+      border: 1px solid #3D405B;
+      padding: 10px;
+      background-color: #3D405B; 
+      color: rgb(255, 255, 255);
+    }
+
+
+    
+  .result {
+       text-align: justify;
+      width: 400px; 
+      height: 90px;
+      border: 1px solid #3D405B;
+      padding: 30px;
+      background-color: #3D405B; 
+      color: rgb(255, 255, 255); 
+  }
+
+
+  </style>
+
+  <section style="background-image: url('images/bg.png'); "class="about_section layout_padding layout_margin">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h1 class="introhehe">Number Operations
+              </h1>
+            </div>   
+  
+            <label class="forres" for="numberInput">Enter an Integer (n):</label>
+            <br></br>
+            <input class="forints" type="number" id="numberInput" min="1">
+            <br></br>
+            <button class="calculate" onclick="calculate()">Calculate</button>
+            <br> </br>
+            <div> </div>
+            <h3 class="result" style="text-align: center;">Results:</h3>
+            <p class="hey"  id="factorialResult"></p>
+            <p  class="hey" id="sumResult"></p>
+            <p  class="hey" id="averageResult"></p>
+          </div>
+        </div>
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="images/math.png" alt="">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div style="background-image: url('images/bg.png');  "class="footer_container">
+
+    <section class="info_section ">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3 ">
+            <div class="info_detail">
+              <h4>
+                John Michael Rivera
+              </h4>
+              <p class="out">
+                I'm a first-year BSIT (Bachelor of Science in Information Technology) student with a passion for coding. I thrive on unraveling the intricate world of programming languages, always seeking new challenges to expand my skills. My journey into the realm of technology is just beginning, and I'm excited to explore, learn, and create innovative solutions that can make a difference."
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-2 mx-auto">
+            <div class="info_link_box">
+              <h4>
+                Links
+              </h4>
+              <div class="info_links">
+                <a class="" href="index.html">
+                  Home
+                </a>
+                <a class="" href="conversion.html">
+                  Conversion
+                </a>
+                <a class="" href="income tax.html">
+                  Income Tax
+                </a>
+                <a class="" href="factorial.html">
+                  Factorial
+                </a>
+                <a class="" href="simple payroll.html">
+                  Simple Payroll
+                </a>
+                <a class="" href="gradescomputation.html">
+                  Grades
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ">
+            <h4>
+              Project
+            </h4>
+            <p class="out">
+              This is our final project in our ITC subject. This website serves as a medium in order for me to showcase my passion in creating website especially front-end development.
+            </p>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-0 ml-auto">
+            <div class="info_contact">
+              <h4>
+                Address
+              </h4>
+              <div class="contact_link_box">
+                <a href="">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  <span>
+                    Jacinto Street, Davao City
+                  </span>
+                </a>
+                <a href="">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <span>
+                    Call +63 91232938291
+                  </span>
+                </a>
+                <a href="">
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <span>
+                    jmfrivera@addu.edu.ph
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="info_social">
+              <a href="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="footer_section">
+      <div class="container">
+        <p>
+      John Michael Rivera
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+
+</body>
+
+</html>
